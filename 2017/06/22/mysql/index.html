@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Curiosity</title>
+  <title>mysql数据库优化 | Curiosity</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Curiosity">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="#mysql数据库优化 ##SQL及索引mysql中的慢查询日志1234.show variables like &apos;slow_query_log&apos;//是否开启.set global slow_query_log_file=&apos;&apos;//设置存储路径.set global log_queries_not_using_indexes=on;//开启慢差查日志.set global long_query_ti">
+<meta name="keywords" content="数据库优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql数据库优化">
+<meta property="og:url" content="http://yoursite.com/2017/06/22/mysql/index.html">
 <meta property="og:site_name" content="Curiosity">
+<meta property="og:description" content="#mysql数据库优化 ##SQL及索引mysql中的慢查询日志1234.show variables like &apos;slow_query_log&apos;//是否开启.set global slow_query_log_file=&apos;&apos;//设置存储路径.set global log_queries_not_using_indexes=on;//开启慢差查日志.set global long_query_ti">
+<meta property="og:updated_time" content="2017-06-25T12:09:34.777Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Curiosity">
+<meta name="twitter:title" content="mysql数据库优化">
+<meta name="twitter:description" content="#mysql数据库优化 ##SQL及索引mysql中的慢查询日志1234.show variables like &apos;slow_query_log&apos;//是否开启.set global slow_query_log_file=&apos;&apos;//设置存储路径.set global log_queries_not_using_indexes=on;//开启慢差查日志.set global long_query_ti">
   
     <link rel="alternative" href="/atom.xml" title="Curiosity" type="application/atom+xml">
   
@@ -141,36 +146,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-mysql" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/22/mysql/" class="archive-article-date">
-  	<time datetime="2017-06-22T02:58:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/22/mysql/">mysql数据库优化</a>
+    <h1 class="article-title" itemprop="name">
+      mysql数据库优化
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/06/22/mysql/" class="archive-article-date">
+  	<time datetime="2017-06-22T02:58:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#mysql数据库优化</p>
+<p>##SQL及索引<br>mysql中的慢查询日志<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.show variables like <span class="string">'slow_query_log'</span>//是否开启</div><div class="line">.<span class="built_in">set</span> global slow_query_log_file=<span class="string">''</span>//设置存储路径</div><div class="line">.<span class="built_in">set</span> global log_queries_not_using_indexes=on;//开启慢差查日志</div><div class="line">.<span class="built_in">set</span> global long_query_time=1//大与于一秒的查询语句</div></pre></td></tr></table></figure></p>
+ <a id="more"></a>
+<p>慢查日志的存储格式：<br>.执行sql的主机信息<br>.sql的执行信息<br>.sql执行时间<br>.sql的内容</p>
+<p>显示慢查日志：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysqldumpslow</div></pre></td></tr></table></figure></p>
+<p>mysql慢查日志分析工具-pt-query-digest<br>‘’’bash<br>pt-query-digest -路径</p>
+<p>‘’’</p>
+<p>###count和max的优化</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -182,84 +214,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/22/mysql/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/15/aboutadmc/" class="archive-article-date">
-  	<time datetime="2017-06-15T02:58:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-15</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/15/aboutadmc/">redis和memcache各自的应用场景</a>
-    </h1>
+  
+    <a href="/2017/06/15/aboutadmc/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">redis和memcache各自的应用场景</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="mysql" data-title="mysql数据库优化" data-url="http://yoursite.com/2017/06/22/mysql/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"mrcuriosity.duoshuo.com"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-redis -memcache</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/15/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-15T02:58:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/15/hello-world/">PHP的性能优化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -282,8 +336,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
